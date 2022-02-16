@@ -1,0 +1,26 @@
+<template>
+    <router-view v-slot="{ Component }">
+        <transition name="Slide" mode="out-in">
+            <component :is="Component" :key="$route.path"></component>
+        </transition>
+  </router-view>
+    <navbarBottom />
+</template>
+<style>
+.Slide-enter-from {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.Slide-enter-to {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+.Slide-leave-to {
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+.Slide-leave-from {
+  opacity: 1;
+  transition: all 0.7s ease;
+}
+</style>
