@@ -7,5 +7,6 @@
     </div>
 </template>
 <script setup>
-
+// const breakpoints = useBreakpoints(breakpointsTailwind)
+// const smAndLarger = breakpoints.greater('sm')
 </script>

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Main />
-        <navbarBottom />
+        product
     </div>
 </template>
