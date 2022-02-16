@@ -4,18 +4,17 @@ import { defineNuxtConfig } from 'nuxt3'
 export default defineNuxtConfig({
   buildModules: [
     '@vueuse/nuxt',
-    // '@nuxtjs/composition-api/module',
-    // '@pinia/nuxt',
+    '@pinia/nuxt',
   ],
-    css: [    '~/assets/css/main.css',  ],
-    build: {
-        postcss: {
-          postcssOptions: {
-            plugins: {
-              tailwindcss: {},
-              autoprefixer: {}
-            }
+  css: ['~/assets/css/main.css'],
+  build: {
+      postcss: {
+        postcssOptions: {
+          plugins: {
+            tailwindcss: {},
+            autoprefixer: {}
           }
         }
       }
+    }
 })

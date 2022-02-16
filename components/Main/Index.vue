@@ -1,12 +1,17 @@
 <template>
     <div>
-        <div class="flex flex-nowrap h-screen w-[100vw] touch-pan-x bg-gray-200">
+        <div class="flex flex-nowrap h-[95vh] w-full touch-pan-x bg-gray-200">
             <MainFirst />
-            <MainSecond />
+            <MainSecond v-if="smAndLarger" />
         </div>
     </div>
 </template>
 <script setup>
-// const breakpoints = useBreakpoints(breakpointsTailwind)
-// const smAndLarger = breakpoints.greater('sm')
+import { useAuth } from "@/stores/auth"
+
+const auth = useAuth()
+
+import { breakpointsTailwind } from '@vueuse/core'
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const smAndLarger = breakpoints.greater('sm')
 </script>

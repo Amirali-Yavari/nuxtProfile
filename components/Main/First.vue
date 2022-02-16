@@ -1,6 +1,6 @@
 <template>
 <div
-    class="h-screen md:h-[92vh] w-full snap-center relative flex sm:z-10 z-20"
+    class="h-screen md:h-[92vh] w-full sm:w-1/2 snap-center relative flex sm:z-10 z-20"
   >
     <div
       class="absolute mb-1 sm:hidden animate-bounce bottom-[50%] right-4 cursor-pointer font-bold select-none"
