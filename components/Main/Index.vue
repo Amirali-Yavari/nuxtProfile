@@ -1,7 +1,12 @@
 <template>
     <div>
-        <div class="h-screen w-full bg-gray-200">
+        <div class="flex flex-nowrap h-screen w-[100vw] touch-pan-x bg-gray-200">
             <MainFirst />
+            <MainSecond />
         </div>
+        <NavbarBottom />
     </div>
 </template>
+<script setup>
+
+</script>
