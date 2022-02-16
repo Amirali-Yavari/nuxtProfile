@@ -4,7 +4,6 @@
             <MainFirst />
             <MainSecond />
         </div>
-        <NavbarBottom />
     </div>
 </template>
 <script setup>
