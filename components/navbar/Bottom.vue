@@ -8,6 +8,7 @@
         >
             <div class="flex flex-row gap-1 items-center">
             <div
+                ref="target"
                 @click="ShowNavHide"
                 class="w-10 h-10 ring-1 ring-gray-300 rounded-md flex items-center justify-center ml-2 cursor-pointer shadow-md hover:bg-gray-100 transition"
             >
@@ -42,6 +43,10 @@
     </div>
 </template>
 <script setup>
+const target =ref(null);
+onClickOutside(target,()=>{
+    show.value=false;
+})
 const show=ref(false);
 function ShowNavHide() {
       show.value = !show.value;
