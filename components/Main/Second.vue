@@ -1,6 +1,7 @@
 <template>
   <div class="w-full sm:w-1/2 h-[92vh] relative z-10">
     <div
+    @click="changeToFirst"
       class="absolute mb-1 sm:hidden animate-bounce bottom-[50%] left-4 cursor-pointer text-pink-500 font-bold select-none"
     >
       <svg
@@ -25,3 +26,12 @@
     />
   </div>
 </template>
+<script setup>
+//pinia
+import { useAuth } from "@/stores/auth"
+const auth = useAuth()
+// function
+function changeToFirst(){
+auth.$reset()
+}
+</script>

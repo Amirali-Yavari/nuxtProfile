@@ -3,6 +3,7 @@
     class="h-screen md:h-[92vh] w-full sm:w-1/2 snap-center relative flex sm:z-10 z-20"
   >
     <div
+      @click="changeToSecond"
       class="absolute mb-1 sm:hidden animate-bounce bottom-[50%] right-4 cursor-pointer font-bold select-none"
     >
       <svg
@@ -28,3 +29,16 @@
     </div>
   </div>
 </template>
+<script setup>
+//pinia
+import { useAuth } from "@/stores/auth"
+const auth = useAuth()
+//function
+function changeToSecond(){
+  auth.$patch({
+    mainPage:'second'
+  })
+  console.log(auth.mainPage)
+}
+
+</script>
