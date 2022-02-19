@@ -7,3 +7,8 @@
         </NuxtLink>
     </div>
 </template>
+<script setup>
+useMeta([
+    {name:"robots",content:"noindex,follow"}
+])
+</script>
