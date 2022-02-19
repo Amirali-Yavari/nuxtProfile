@@ -10,6 +10,10 @@
     </div>
 </template>
 <script setup>
+//meta 
+useMeta([
+  {name:"robots",content:"noindex,nofollow"},
+])
 //pinia
 import { useAuth } from "@/stores/auth"
 const auth = useAuth()
