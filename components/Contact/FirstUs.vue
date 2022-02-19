@@ -31,7 +31,7 @@
     </div>
     <h1 class="text-3xl text-blue-900">Contact Us</h1>
     <p class="text-lg">
-      If you want to contact me i give you 4 ways to you if you see any bug or
+      If you want to contact me i give you <span class="font-sans">4</span> ways to you if you see any bug or
       something new please tell me I will be happy
     </p>
     <div class="grid grid-cols-2 grid-rows-2 gap-2">

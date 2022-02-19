@@ -20,10 +20,10 @@
       class="h-1/2 w-full object-cover object-center shadow-md"
       alt="Amirali Yavari Project Picture"
     />
-    <h1 class="text-3xl text-blue-900 border-b-2 border-pink-500 w-[50%]">
+    <h1 class="text-3xl font-iran text-blue-900 border-b-2 border-pink-500 w-[50%]">
       {{ title }}
     </h1>
-    <p class="md:text-xl">
+    <p class="md:text-xl font-iran">
       {{ text }}
     </p>
     

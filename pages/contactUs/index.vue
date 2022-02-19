@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen w-full flex flex-row items-center bg-gray-200">
+    <div class="h-screen w-full font-iran flex flex-row items-center bg-gray-200">
         <Title>Contact Us</Title>
         <transition name="firstPage">
             <LazyContactFirstUs v-if="auth.contactpage=='first'" />

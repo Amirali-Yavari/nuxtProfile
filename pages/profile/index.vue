@@ -1,7 +1,7 @@
 <template>
 <div>
   <Title>Profile and About me of Amirali Yavari</Title>
-  <div class="h-screen w-full flex bg-gray-200">
+  <div class="h-screen w-full font-iran flex bg-gray-200">
     <div class="w-full flex flex-col p-5 gap-1">
       <div class="w-full flex items-center justify-center">
         <img
