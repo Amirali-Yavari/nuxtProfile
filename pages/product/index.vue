@@ -20,6 +20,12 @@
     </div>
 </template>
 <script setup>
+//meta
+useMeta([
+  {name:"description",content:"this Amirali Yavari product"},
+  {name:"robots",content:"index,nofollow"},
+  {name:"googlebot",content:"index,nofollow"}
+])
 import {breakpointsTailwind} from "@vueuse/core"
 //break points
 const breakepoints = useBreakpoints(breakpointsTailwind);
