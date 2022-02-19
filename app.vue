@@ -1,10 +1,12 @@
 <template>
-    <router-view v-slot="{ Component }">
+    <div class="bg-gray-200">
+      <router-view v-slot="{ Component }">
         <transition name="Slide" mode="out-in">
             <component :is="Component" :key="$route.path"></component>
         </transition>
-  </router-view>
-    <navbarBottom />
+      </router-view>
+      <navbarBottom />
+    </div>
 </template>
 <style>
 .Slide-enter-from {
