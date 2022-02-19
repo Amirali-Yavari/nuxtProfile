@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full sm:w-1/2 flex flex-col p-10 gap-8 relative" ref="el">
+  <div class="w-full sm:w-1/2  flex flex-col p-10 gap-8 relative" ref="el">
     <transition name="modal">
       <ContactModalPage
         class="z-30"
@@ -9,8 +9,8 @@
       />
     </transition>
     <div
-
-      class="absolute mb-1 sm:hidden -bottom-1 right-4 cursor-pointer font-bold select-none"
+      @click="ScrollRight"
+      class="absolute mb-1 sm:hidden bottom-0 right-4 cursor-pointer font-bold select-none"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -81,11 +81,30 @@
   </div>
 </template>
 <script setup>
+//pinia
+import { useAuth } from "@/stores/auth"
+const auth = useAuth()
+//Swipe to
+    const el = ref(null);
+    const { isSwiping, direction } = useSwipe(el, {
+      onSwipeEnd() {
+        if (direction.value == "LEFT") {
+          auth.$patch({
+            contactpage: "second"
+          })
+        }
+      },
+    });
 //data
 let modalValue = ref("");
 let showModal = ref(false);
 //function
-function closebtn() {
+    function ScrollRight() {
+      auth.$patch({
+        contactpage: "second"
+      })
+    }
+    function closebtn() {
       modalValue.value = "";
       showModal.value = false;
     }

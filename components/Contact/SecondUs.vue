@@ -1,9 +1,11 @@
 <template>
   <div
+    ref="el"
     class="w-full sm:w-1/2 flex flex-col items-center gap-3 relative"
   >
     <div
-      class="absolute mb-1 sm:hidden -bottom-10 left-4 cursor-pointer text-pink-500 font-bold select-none"
+      @click="ScrollLeft"
+      class="absolute mb-1 sm:hidden bottom-0 left-4 cursor-pointer text-pink-500 font-bold select-none"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -43,3 +45,21 @@
     </div>
   </div>
 </template>
+<script setup>
+//pinia
+import { useAuth } from "@/stores/auth"
+const auth = useAuth()
+//function
+function ScrollLeft () {
+  auth.$reset('contactpage')
+}
+//Swipe to
+const el = ref(null);
+const { isSwiping, direction } = useSwipe(el, {
+  onSwipeEnd() {
+    if (direction.value == "RIGHT") {
+      auth.$reset('contactpage')
+    }
+  },
+});
+</script>

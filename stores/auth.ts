@@ -2,7 +2,8 @@ import { defineStore, acceptHMRUpdate } from 'pinia'
 
 export const useAuth = defineStore('auth', {
   state: () => ({
-    mainPage: "first"
+    mainPage: "first",
+    contactpage: "first",
   })
 })
 
