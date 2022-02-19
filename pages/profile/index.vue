@@ -44,7 +44,9 @@
 useMeta([
   {name:"description",content:"About me of Amirali Yavari "},
   {name:"robots",content:"index,follow"},
-  {name:"googlebot",content:"index,follow"}
+  {name:"googlebot",content:"index,follow"},
+  {name:"author",content:"Amirali Yavari"},
+  {name:"keywords",content:"amirali,amirali yavari,yavari,shahabbasian,mehdi,mehdi shahabbasian,damoon,damoon.pro"}
 ])
 //change title
 const title=useTitle();

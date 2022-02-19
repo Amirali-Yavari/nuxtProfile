@@ -24,7 +24,9 @@
 useMeta([
   {name:"description",content:"this Amirali Yavari product"},
   {name:"robots",content:"index,nofollow"},
-  {name:"googlebot",content:"index,nofollow"}
+  {name:"googlebot",content:"index,nofollow"},
+  {name:"author",content:"Amirali Yavari"},
+  {name:"keywords",content:"product,site,amirali,amirali yavari,javascript,website,todo list,personal,yavari"}
 ])
 import {breakpointsTailwind} from "@vueuse/core"
 //break points
