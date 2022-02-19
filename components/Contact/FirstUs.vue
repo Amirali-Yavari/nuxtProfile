@@ -1,13 +1,13 @@
 <template>
   <div class="w-full sm:w-1/2 flex flex-col p-10 gap-8 relative" ref="el">
-    <!-- <transition name="modal">
-      <ModalContact
+    <transition name="modal">
+      <ContactModalPage
         class="z-30"
         @closebtn="closebtn"
         :modalValue="modalValue"
         v-if="showModal"
       />
-    </transition> -->
+    </transition>
     <div
 
       class="absolute mb-1 sm:hidden -bottom-1 right-4 cursor-pointer font-bold select-none"
@@ -34,6 +34,7 @@
     </p>
     <div class="grid grid-cols-2 grid-rows-2 gap-2">
       <div
+        @click="instagram"
         class="flex flex-row gap-1 items-center text-lg select-none transform hover:scale-105 transition cursor-pointer shadow-md ring-1 ring-gray-300 bg-gray-200"
       >
         <img
@@ -44,6 +45,7 @@
         Instagram
       </div>
       <div
+        @click="telegram"
         class="flex flex-row items-center text-lg gap-1 select-none transform hover:scale-105 transition cursor-pointer shadow-md ring-1 ring-gray-300"
       >
         <img
@@ -54,7 +56,7 @@
         Telegram
       </div>
       <div
- 
+        @click="email"
         class="flex flex-row items-center text-lg gap-1 select-none transform hover:scale-105 transition cursor-pointer shadow-md ring-1 ring-gray-300"
       >
         <img
@@ -65,7 +67,7 @@
         Email
       </div>
       <div
-
+        @click="github"
         class="flex flex-row items-center text-lg gap-1 select-none transform hover:scale-105 transition cursor-pointer shadow-md ring-1 ring-gray-300"
       >
         <img
@@ -78,3 +80,48 @@
     </div>
   </div>
 </template>
+<script setup>
+//data
+let modalValue = ref("");
+let showModal = ref(false);
+//function
+function closebtn() {
+      modalValue.value = "";
+      showModal.value = false;
+    }
+    //---------------------------
+    function instagram() {
+      modalValue.value = "Instagram";
+      showModal.value = true;
+    }
+    //---------------------------
+    function telegram() {
+      modalValue.value = "Telegram";
+      showModal.value = true;
+    }
+    //---------------------------
+    function email() {
+      modalValue.value = "Email";
+      showModal.value = true;
+    }
+    //---------------------------
+    function github() {
+      modalValue.value = "Github";
+      showModal.value = true;
+    }
+    //---------------------------
+</script>
+<style scoped>
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: all 0.5s ease;
+}
+.modal-enter-to,
+.modal-leave-from {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+</style>

@@ -5,7 +5,7 @@
                 <MainFirst v-if="auth.mainPage=='first'" />
             </transition>
             <transition name="secondPage">
-                <MainSecond v-if="auth.mainPage=='second'" />
+                <MainSecond v-if="smAndLarger|| auth.mainPage=='second'" />
             </transition>
         </div>
     </div>
@@ -23,27 +23,37 @@ const smAndLarger = breakpoints.greater('sm')
 <style scoped>
 .firstPage-enter-from,
 .firstPage-leave-to {
-    transform: translateX(-300px);
+  width: 0;
   opacity: 0;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 .firstPage-enter-to,
 .firstPage-leave-from {
+  width: 100%;
   opacity: 1;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 .secondPage-enter-from,
 .secondPage-leave-to {
   transform: translateX(300px);
-  width: 0%;
+  width: 0;
   opacity: 0;
   transition: all 0.1s ease;
 }
-.secondPage-enter-to,
-.secondPage-leave-from {
-  transform: translateX(0px);
+@media (min-width: 480px) {
+  .secondPage-enter-to,
+  .secondPage-leave-from {
+  width: 50%;
+  opacity: 1;
+  transition: all 0.1s ease;
+}
+}
+@media (max-width: 480px) {
+  .secondPage-enter-to,
+  .secondPage-leave-from {
   width: 100%;
   opacity: 1;
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
+}
 }
 </style>
