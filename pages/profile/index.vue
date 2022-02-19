@@ -1,6 +1,6 @@
 <template>
 <div>
-  <Title>Profile</Title>
+  <Title>Profile and About me of Amirali Yavari</Title>
   <div class="h-screen w-full flex bg-gray-200">
     <div class="w-full flex flex-col p-5 gap-1">
       <div class="w-full flex items-center justify-center">
@@ -41,6 +41,11 @@
 </div>
 </template>
 <script setup>
+useMeta([
+  {name:"description",content:"About me of Amirali Yavari "},
+  {name:"robots",content:"index,follow"},
+  {name:"googlebot",content:"index,follow"}
+])
 //change title
 const title=useTitle();
 title.value="Profile"
