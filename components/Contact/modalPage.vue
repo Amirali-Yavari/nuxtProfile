@@ -90,15 +90,18 @@
 </template>
 
 <script setup>
+//props
+const props=defineProps({
+  modalValue: String,
+})
+const emit = defineEmits("closebtn")
 //data
 const target = ref(null);
-//close outside click
-onClickOutside(target, () => {
-    context.emit("closebtn");
-});
 let modalValue1 = ref(props.modalValue);
+//close outside click
+onClickOutside(target, closebtn)
 //function
 function closebtn() {
-    context.emit("closebtn");
+  emit("closebtn")
 }
 </script>
