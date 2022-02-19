@@ -6,7 +6,10 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
   ],
-  css: ['~/assets/css/main.css'],
+  css: [
+    '~/assets/css/main.css',
+    '~/assets/css/fontiran.css'
+  ],
   build: {
       postcss: {
         postcssOptions: {

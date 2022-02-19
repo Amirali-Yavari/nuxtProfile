@@ -1,13 +1,15 @@
 <template>
   <div class="w-full sm:w-1/2  flex flex-col p-10 gap-8 relative" ref="el">
-    <transition name="modal">
-      <LazyContactModalPage
-        class="z-30"
-        @closebtn="closebtn"
-        :modalValue="modalValue"
-        v-if="showModal"
-      />
-    </transition>
+    <ClientOnly>
+        <transition name="modal">
+          <LazyContactModalPage
+            class="z-30"
+            @closebtn="closebtn"
+            :modalValue="modalValue"
+            v-if="showModal"
+          />
+        </transition>
+    </ClientOnly>
     <div
       @click="ScrollRight"
       class="absolute mb-1 sm:hidden bottom-0 right-4 cursor-pointer font-bold select-none"

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Title>Amirali Yavari</Title>
+        <Title>Amirali Yavari Main Page</Title>
         <Main />
     </div>
 </template>

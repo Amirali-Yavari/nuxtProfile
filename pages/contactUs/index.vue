@@ -12,7 +12,7 @@
 <script setup>
 //meta 
 useMeta([
-  {name:"robots",content:"noindex,nofollow"},
+  {name:"robots",content:"index,nofollow"},
 ])
 //pinia
 import { useAuth } from "@/stores/auth"
