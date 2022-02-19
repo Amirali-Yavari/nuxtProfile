@@ -1,5 +1,6 @@
 <template>
 <div
+    ref="el"
     class="h-screen md:h-[92vh] w-full sm:w-1/2 snap-center relative flex sm:z-10 z-20"
   >
     <div
@@ -30,6 +31,17 @@
   </div>
 </template>
 <script setup>
+//Swipe to
+    const el = ref(null);
+    const { isSwiping, direction } = useSwipe(el, {
+      onSwipeEnd() {
+        if (direction.value == "LEFT") {
+          auth.$patch({
+            mainPage: "second"
+          })
+        }
+      },
+    });
 //pinia
 import { useAuth } from "@/stores/auth"
 const auth = useAuth()
