@@ -5,9 +5,12 @@
             <component :is="Component" :key="$route.path"></component>
         </transition>
       </router-view>
-      <navbarBottom />
+      <navbarBottom v-if="online===true" />
     </div>
 </template>
+<script setup>
+const online =useOnline();
+</script>
 <style>
 .Slide-enter-from {
   opacity: 0;
