@@ -1,5 +1,6 @@
 <template>
 <div>
+  <Title>Profile</Title>
   <div class="h-screen w-full flex bg-gray-200">
     <div class="w-full flex flex-col p-5 gap-1">
       <div class="w-full flex items-center justify-center">
