@@ -7,7 +7,7 @@
         <img
           src="/MyImage/person_3-removebg-preview.png"
           class="rounded-full z-20 w-1/3 md:fixed md:h-full md:right-0 md:top-0 md:rounded-none md:w-2/4 shadow-md md:shadow-none md:object-cover md:object-top"
-          alt=""
+          alt="This is Amirali Yavari Profile Image"
         />
       </div>
       <div
@@ -40,3 +40,8 @@
   <navbarBottom />
 </div>
 </template>
+<script setup>
+//change title
+const title=useTitle();
+title.value="Profile"
+</script>

@@ -22,7 +22,7 @@
     <img
       src="/MyImage/vv-min-removebg.png"
       class="object-cover w-full h-[92vh]"
-      alt=""
+      alt="This is Amirali Yavari Image"
     />
   </div>
 </template>

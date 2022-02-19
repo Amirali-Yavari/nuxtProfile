@@ -6,5 +6,7 @@
     </div>
 </template>
 <script setup>
-
+// change title
+const title=useTitle();
+title.value="Contact Us"
 </script>

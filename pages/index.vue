@@ -4,3 +4,14 @@
         <Main />
     </div>
 </template>
+<script setup>
+//meta
+useMeta([
+    {name:"description",content:"This is Amirali Yavari personal website"},
+    {name:"robots",content:"index, follow"},
+    {name:"viewport", content:"width=device-width, initial-scale=1"}
+])
+//change title
+const title=useTitle();
+title.value="Amirali Yavari"
+</script>
