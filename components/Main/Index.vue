@@ -2,10 +2,10 @@
     <div>
         <div class="flex flex-nowrap h-[95vh] w-full touch-pan-x bg-gray-200">
             <transition name="firstPage">
-                <MainFirst v-if="auth.mainPage=='first'" />
+                <LazyMainFirst v-if="auth.mainPage=='first'" />
             </transition>
             <transition name="secondPage">
-                <MainSecond v-if="smAndLarger|| auth.mainPage=='second'" />
+                <LazyMainSecond v-if="smAndLarger|| auth.mainPage=='second'" />
             </transition>
         </div>
     </div>

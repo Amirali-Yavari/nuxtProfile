@@ -1,7 +1,7 @@
 <template>
   <div class="w-full sm:w-1/2  flex flex-col p-10 gap-8 relative" ref="el">
     <transition name="modal">
-      <ContactModalPage
+      <LazyContactModalPage
         class="z-30"
         @closebtn="closebtn"
         :modalValue="modalValue"

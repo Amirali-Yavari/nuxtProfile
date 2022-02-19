@@ -8,7 +8,7 @@
                 Products
             </h1>
             <transition name="product" v-for="data in proddatas" :key="data.key">
-            <Product
+            <LazyProduct
                 :title="data.title"
                 v-if="show === data.key"
                 :show="show"

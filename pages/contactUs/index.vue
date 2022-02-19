@@ -2,10 +2,10 @@
     <div class="h-screen w-full flex flex-row items-center bg-gray-200">
         <Title>Contact Us</Title>
         <transition name="firstPage">
-            <ContactFirstUs v-if="auth.contactpage=='first'" />
+            <LazyContactFirstUs v-if="auth.contactpage=='first'" />
         </transition>
         <transition name="secondPage">        
-            <ContactSecondUs v-if="auth.contactpage=='second'||smAndLarger" />
+            <LazyContactSecondUs v-if="auth.contactpage=='second'||smAndLarger" />
         </transition>
     </div>
 </template>
