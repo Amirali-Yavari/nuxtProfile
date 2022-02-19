@@ -2,11 +2,11 @@
   <div class="w-full sm:w-1/2 h-[92vh] relative z-10" ref="el">
     <div
     @click="changeToFirst"
-      class="absolute mb-1 sm:hidden animate-bounce bottom-[50%] left-4 cursor-pointer text-pink-500 font-bold select-none"
+      class="absolute mb-1 sm:hidden animate-pulse bottom-[50%] left-4 cursor-pointer text-pink-500 font-bold select-none"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-8 w-8 bg-pink-500 rounded-full text-white"
+        class="h-8 w-8 rounded-full text-pink-500"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
