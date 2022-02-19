@@ -1,6 +1,6 @@
 <template>
-<Title>Products</Title>
     <div ref="el" class="flex flex-col items-center h-screen z-20">
+        <Title>Products</Title>
         <div
         class="w-full gap-8 relative flex flex-col items-center justify-center p-5"
         >

@@ -4,19 +4,19 @@
   >
     <img
       v-if="image == 1"
-      src="./../../public/MyImage/image1.jpg"
+      src="MyImage/image1.jpg"
       class="h-1/2 w-full object-cover object-center shadow-md"
       alt="Amirali Yavari Project Picture"
     />
     <img
       v-if="image == 2"
-      src="./../../public/MyImage/image3.jpeg"
+      src="MyImage/image3.jpeg"
       class="h-1/2 w-full object-cover object-center shadow-md"
       alt="Amirali Yavari Project Picture"
     />
     <img
       v-if="image == 3"
-      src="./../../public/MyImage/image2.jpg"
+      src="MyImage/image2.jpg"
       class="h-1/2 w-full object-cover object-center shadow-md"
       alt="Amirali Yavari Project Picture"
     />
