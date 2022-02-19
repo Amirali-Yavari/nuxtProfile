@@ -1,7 +1,6 @@
 <template>
     <div class="bg-gray-200">
-      <div v-if="online==false" class="h-screen w-full z-30 bg-black"> Check your network  </div>
-      <router-view v-slot="{ Component }">
+      <router-view class="z-20" v-slot="{ Component }">
         <transition name="Slide" mode="out-in">
             <component :is="Component" :key="$route.path"></component>
         </transition>
@@ -27,7 +26,3 @@
   transition: all 0.7s ease;
 }
 </style>
-<script setup>
-//online check
-const online=useOnline()
-</script>

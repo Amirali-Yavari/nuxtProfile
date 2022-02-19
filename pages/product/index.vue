@@ -1,5 +1,8 @@
 <template>
-    <div ref="el" class="flex flex-col items-center h-screen z-20">
+    <div ref="el" class="flex flex-col items-center h-screen">
+      <ClientOnly>
+          <NotifyOnline v-if="online==false" />
+      </ClientOnly>
         <Title>Products of Amirali Yavari</Title>
         <div
         class="w-full gap-8 relative flex flex-col items-center justify-center p-5"
@@ -10,7 +13,7 @@
             <transition name="product" v-for="data in proddatas" :key="data.key">
             <LazyProduct
                 :title="data.title"
-                v-if="show === data.key"
+                v-if="show === data.key && online === true"
                 :show="show"
                 :text="data.text"
                 :image="data.image"
@@ -20,6 +23,8 @@
     </div>
 </template>
 <script setup>
+//online check
+const online=useOnline()
 //meta
 useMeta([
   {name:"description",content:"this Amirali Yavari product"},

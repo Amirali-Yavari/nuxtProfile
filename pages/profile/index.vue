@@ -1,5 +1,8 @@
 <template>
 <div>
+  <ClientOnly>
+    <NotifyOnline v-if="online==false" />
+  </ClientOnly>
   <Title>Profile and About me of Amirali Yavari</Title>
   <div class="h-screen w-full font-iran flex bg-gray-200">
     <div class="w-full flex flex-col p-5 gap-1">
@@ -41,6 +44,8 @@
 </div>
 </template>
 <script setup>
+//online check
+const online=useOnline()
 useMeta([
   {name:"description",content:"About me of Amirali Yavari "},
   {name:"robots",content:"index,follow"},

@@ -1,5 +1,8 @@
 <template>
     <div class="h-screen w-full font-iran flex flex-row items-center bg-gray-200">
+      <ClientOnly>
+          <NotifyOnline v-if="online==false" />
+      </ClientOnly>
         <Title>Contact Us</Title>
         <transition name="firstPage">
             <LazyContactFirstUs v-if="auth.contactpage=='first'" />
@@ -10,6 +13,8 @@
     </div>
 </template>
 <script setup>
+//online check
+const online=useOnline()
 //meta 
 useMeta([
   {name:"robots",content:"index,nofollow"},

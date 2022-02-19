@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col gap-4 md:w-1/3 ring-1 ring-gray-300 bg-gray-100 p-4 h-[70vh] relative select-none"
+    class="flex flex-col gap-4 md:w-1/3 ring-1 ring-gray-300 bg-gray-100 p-4 h-[70vh] relative select-none Z-20"
   >
     <img
       v-if="image == 1"

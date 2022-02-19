@@ -1,10 +1,15 @@
 <template>
     <div>
+        <ClientOnly>
+            <NotifyOnline v-if="online==false" />
+        </ClientOnly>
         <Title>Amirali Yavari Main Page</Title>
         <Main />
     </div>
 </template>
 <script setup>
+//online check
+const online=useOnline()
 //meta
 useMeta([
     {name:"description",content:"This is Amirali Yavari personal website"},
