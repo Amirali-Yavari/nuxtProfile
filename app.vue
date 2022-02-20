@@ -1,6 +1,6 @@
 <template>
     <div class="bg-gray-200">
-      <Particles
+      <Particles              
                 id="tsparticles"
                 :options="{
                     fpsLimit: 120,
@@ -24,7 +24,7 @@
                                 size: 40
                             },
                             push: {
-                                quantity: 4
+                                quantity: 1
                             },
                             repulse: {
                                 distance: 200,

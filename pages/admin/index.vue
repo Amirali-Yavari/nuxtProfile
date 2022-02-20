@@ -1,3 +1,3 @@
 <template>
-    <div>admin page</div>
+    <div class="w-full h-screen">admin page</div>
 </template>
