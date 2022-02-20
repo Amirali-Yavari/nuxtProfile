@@ -10,6 +10,15 @@
         validation="required|*email|length:6"
         >
         </FormKit>
+        <FormKit
+        placeholder="Please enter the Password"
+        input-class="bg-gray-200 p-1 rounded-sm"
+        label="Password"
+        type="password"
+        validation-visibility="blur"
+        validation="required|*password|length:8"
+        >
+        </FormKit>
     </FormKit>
     </div>
 </template>
