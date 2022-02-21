@@ -44,7 +44,7 @@
                             width: 1
                         },
                         collisions: {
-                            enable: true
+                            enable: false
                         },
                         move: {
                             direction: 'top',
