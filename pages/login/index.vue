@@ -36,6 +36,10 @@
     </div>
 </template>
 <script setup>
+//pinia
+import { useAuth } from "@/stores/auth"
+const auth = useAuth()
+//router
 const router = useRouter();
 //form datas
 const formdata=ref();
@@ -45,6 +49,9 @@ function formSubmit() {
     if(formdata.value.email_2 === "amiraliyavari785@gmail.com") {
         //check password
         if(formdata.value.password_3 === "Amir1381") {
+            auth.$patch({
+                logedIn:true
+            })
             router.push('/admin')
         }else {
             //password wrong error

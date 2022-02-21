@@ -4,6 +4,7 @@ export const useAuth = defineStore('auth', {
   state: () => ({
     mainPage: "first",
     contactpage: "first",
+    logedIn:false,
   })
 })
 
