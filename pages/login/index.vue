@@ -36,13 +36,20 @@
     </div>
 </template>
 <script setup>
+//title
+const title = useTitle();
+title.value='Login'
+//meta
+useMeta([
+    {name:'robots',content:'noindex,nofollow'}
+])
 //pinia
 import { useAuth } from "@/stores/auth"
 const auth = useAuth()
 //router
 const router = useRouter();
 //form datas
-const formdata=ref();
+const formdata = ref();
 //functions
 function formSubmit() {
     //check email
