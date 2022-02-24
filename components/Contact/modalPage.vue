@@ -15,7 +15,7 @@
       </div>
       <h2 class="text-2xl text-blue-900">My {{ modalValue1 }}</h2>
       <p class="text-center">You can follow me on Instagram</p>
-      <a href="" target="_blank">
+      <a href="https://www.instagram.com/amirali_crl/" target="_blank">
         <div
           class="text-2xl p-2 text-white bg-pink-500 font-logo cursor-pointer select-none hover:bg-pink-700 ring-1 shadow-md shadow-gray-700 ring-pink-900 rounded-sm transition"
         >
@@ -36,7 +36,7 @@
       </div>
       <h2 class="text-2xl text-blue-900">My {{ modalValue1 }}</h2>
       <p class="text-center">You can send me a message</p>
-      <a href="" target="_blank">
+      <a href="https://t.me/Amirali_crl" target="_blank">
         <div
           class="text-2xl p-2 text-white bg-pink-500 font-logo cursor-pointer select-none hover:bg-pink-700 ring-1 shadow-md shadow-gray-700 ring-pink-900 rounded-sm transition"
         >
@@ -57,13 +57,11 @@
       </div>
       <h2 class="text-2xl text-blue-900">My {{ modalValue1 }}</h2>
       <p class="text-center">You can send me a email</p>
-      <a href="" target="_blank">
         <div
           class="text-sm p-2 text-white bg-pink-500 font-logo cursor-pointer select-none hover:bg-pink-700 ring-1 shadow-md shadow-gray-700 ring-pink-900 rounded-sm transition"
         >
           Amiraliyavari785@gmail.com
         </div>
-      </a>
     </div>
     <div
       ref="target"
