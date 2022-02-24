@@ -20,8 +20,8 @@
       </svg>
     </div>
     <img
-      src="/MyImage/vv-min-removebg.png"
-      class="object-cover w-full h-[95vh]"
+      src="/MyImage/amir.png"
+      class="object-cover xl:object-contain  w-full h-[95vh] xl:h-[100vh]"
       alt="This is Amirali Yavari Image"
     />
   </div>

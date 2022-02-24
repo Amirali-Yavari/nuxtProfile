@@ -34,10 +34,10 @@
                     },
                     particles: {
                         color: {
-                            value: '#f0f'
+                            value: 'c81243'
                         },
                         links: {
-                            color: '#f0f',
+                            color: 'c81243',
                             distance: 150,
                             enable: true,
                             opacity: 0.5,
@@ -65,7 +65,7 @@
                             value: 80
                         },
                         opacity: {
-                            value: 0.5
+                            value: 0.6
                         },
                         shape: {
                             type: 'circle'
