@@ -7,7 +7,7 @@
         <div
         class="w-full gap-8 relative flex flex-col items-center justify-center p-5"
         >
-            <h1 class="text-center md:text-5xl text-3xl mt-2 text-blue-800">
+            <h1 class="text-center md:text-5xl text-3xl mt-2 text-blue-800 select-none">
                 Products
             </h1>
             <transition name="product" v-for="data in proddatas" :key="data.key">
