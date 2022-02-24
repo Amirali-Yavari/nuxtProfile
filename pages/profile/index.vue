@@ -8,8 +8,8 @@
     <div class="w-full flex flex-col p-5 gap-1">
       <div class="w-full flex items-center justify-center">
         <img
-          src="/MyImage/person_3-removebg-preview.png"
-          class="rounded-full z-20 w-1/3 md:fixed md:h-full md:right-0 md:top-0 md:rounded-none md:w-2/4 shadow-md md:shadow-none md:object-cover md:object-top"
+          src="/MyImage/amir2.png"
+          class="rounded-full z-20 w-1/3 md:fixed md:h-full md:right-0 md:top-0 md:rounded-none md:w-2/4  md:object-contain"
           alt="This is Amirali Yavari Profile Image"
         />
       </div>
