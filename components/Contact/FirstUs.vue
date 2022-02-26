@@ -41,7 +41,7 @@
       >
         <img
           class="w-10 h-10"
-          src="@/public/MyImage/icons8-instagram-48.png"
+          src="/MyImage/icons8-instagram-48.png"
           alt=""
         />
         Instagram
@@ -52,7 +52,7 @@
       >
         <img
           class="w-10 h-10"
-          src="@/public/MyImage/icons8-telegram-app-48.png"
+          src="/MyImage/icons8-telegram-app-48.png"
           alt=""
         />
         Telegram
@@ -63,7 +63,7 @@
       >
         <img
           class="w-8 h-8 mr-1 ml-1"
-          src="@/public/MyImage/icons8-email-sign-100.png"
+          src="/MyImage/icons8-email-sign-100.png"
           alt=""
         />
         Email
@@ -74,7 +74,7 @@
       >
         <img
           class="w-10 h-10"
-          src="@/public/MyImage/icons8-github-48.png"
+          src="/MyImage/icons8-github-48.png"
           alt=""
         />
         Github
