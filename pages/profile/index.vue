@@ -9,7 +9,7 @@
       <div class="w-full flex items-center justify-center">
         <img
           src="/MyImage/amir2.png"
-          class="rounded-full z-20 w-1/3 md:fixed md:h-full md:right-0 md:top-0 md:rounded-none md:w-2/4  md:object-contain"
+          class="rounded-full z-20 w-1/3 md:fixed md:h-full md:right-0 md:top-0 md:rounded-none md:w-2/4  md:object-cover"
           alt="This is Amirali Yavari Profile Image"
         />
       </div>
