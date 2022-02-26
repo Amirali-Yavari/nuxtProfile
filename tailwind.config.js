@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-      iran: ['IRANSans']
+      iran: ['IRANSans'],
+      logo: ['"Segoe Print"']
     }},
   },
   plugins: [],

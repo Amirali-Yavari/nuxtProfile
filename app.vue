@@ -8,7 +8,7 @@
                         events: {
                             onClick: {
                                 enable: true,
-                                mode: 'push'
+                                mode: 'repulse'
                             },
                             onHover: {
                                 enable: true,
@@ -27,7 +27,7 @@
                                 quantity: 1
                             },
                             repulse: {
-                                distance: 200,
+                                distance: 150,
                                 duration: 0.4
                             }
                         }
