@@ -1,5 +1,8 @@
 <template>
     <div ref="el" class="flex flex-col items-center h-screen">
+       <transition name="tip">
+            <TipProduct v-if="showTip" />
+        </transition>
       <ClientOnly>
           <NotifyOnline v-if="online==false" />
       </ClientOnly>
@@ -23,6 +26,12 @@
     </div>
 </template>
 <script setup>
+const showTip = ref(true)
+onMounted(() => {
+  setTimeout(()=>{
+    showTip.value=false
+  },5000)
+})
 //online check
 const online=useOnline()
 //meta
@@ -107,7 +116,7 @@ title.value="Product"
       });
     }
 </script>
-<style scoped>
+<style>
 .product-enter-from {
   opacity: 0;
   transform: translateY(-50px);
@@ -118,4 +127,13 @@ title.value="Product"
   transform: translateY(0);
   transition: all 1s ease;
 }
-</style>>
+.tip-leave-to {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.5s ease;
+}
+.tip-leave-from{
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+</style>

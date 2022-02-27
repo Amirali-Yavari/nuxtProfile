@@ -9,7 +9,7 @@
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-8 w-8 rounded-full text-pink-500"
+        class="h-8 w-8 rounded-full text-red-500"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -31,26 +31,19 @@
   </div>
 </template>
 <script setup>
+const router=useRouter();
 //Swipe to
     const el = ref(null);
     const { isSwiping, direction } = useSwipe(el, {
       onSwipeEnd() {
         if (direction.value == "LEFT") {
-          auth.$patch({
-            mainPage: "second"
-          })
+          router.push('/main/2')
         }
       },
     });
-//pinia
-import { useAuth } from "@/stores/auth"
-const auth = useAuth()
 //function
 function changeToSecond(){
-  auth.$patch({
-    mainPage:'second'
-  })
-  console.log(auth.mainPage)
+  router.push('/main/2')
 }
 
 </script>

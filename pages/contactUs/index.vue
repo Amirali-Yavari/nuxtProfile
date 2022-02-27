@@ -1,27 +1,29 @@
 <template>
-    <div class="h-screen w-full font-iran flex flex-row items-center bg-gray-200">
+    <div class="h-screen w-full font-iran flex flex-row items-center bg-gray-200"> 
       <ClientOnly>
+        <transition name="tip">
+          <TipContact v-if="!smAndLarger && showTip" />
+        </transition>
           <NotifyOnline v-if="online==false" />
       </ClientOnly>
         <Title>Contact Us</Title>
-        <transition name="firstPage">
-            <LazyContactFirstUs v-if="auth.contactpage=='first'" />
-        </transition>
-        <transition name="secondPage">        
-            <LazyContactSecondUs v-if="auth.contactpage=='second'||smAndLarger" />
-        </transition>
+            <LazyContactFirstUs />
+            <LazyContactSecondUs v-if="smAndLarger" />
     </div>
 </template>
 <script setup>
+const showTip = ref(true)
+onMounted(() => {
+  setTimeout(()=>{
+    showTip.value=false
+  },5000)
+})
 //online check
 const online=useOnline()
 //meta 
 useMeta([
   {name:"robots",content:"index,nofollow"},
 ])
-//pinia
-import { useAuth } from "@/stores/auth"
-const auth = useAuth()
 // change title
 const title=useTitle();
 title.value="Contact Us"
@@ -30,31 +32,3 @@ import { breakpointsTailwind } from '@vueuse/core'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smAndLarger = breakpoints.greater('sm')
 </script>
-<style scoped>
-.firstPage-enter-from,
-.firstPage-leave-to {
-  width: 0%;
-  opacity: 0;
-  transition: all 0.1s ease;
-}
-.firstPage-enter-to,
-.firstPage-leave-from {
-  width: 100%;
-  opacity: 1;
-  transition: all 0.1s ease;
-}
-.secondPage-enter-from,
-.secondPage-leave-to {
-  transform: translateX(10vw);
-  width: 0%;
-  opacity: 0;
-  transition: all 0.1s ease;
-}
-.secondPage-enter-to,
-.secondPage-leave-from {
-  transform: translateX(0px);
-  width: 100%;
-  opacity: 1;
-  transition: all 0.1s ease;
-}
-</style>
