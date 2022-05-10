@@ -16,6 +16,7 @@
     "tailwindcss": "^3.0.22"
   },
   "dependencies": {
+    "gsap": "^3.10.4",
     "particles.vue3": "^1.41.3",
     "pinia": "^2.0.11"
   }
