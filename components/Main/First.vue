@@ -23,15 +23,31 @@
       </svg>
     </div>
     <div class="p-10 flex flex-col gap-8">
-        <MainLogo class="z-10"/>
-        <MainTitle class="z-10"/>
-        <MainSummary class="z-10"/>
-        <MainReadMore class="z-10"/>
+        <MainLogo v-show="show" class="z-10"/>
+        <MainTitle v-show="show" class="z-10"/>
+        <MainSummary v-show="show" class="z-10"/>
+        <MainReadMore v-show="show" class="z-10"/>
     </div>
   </div>
 </template>
 <script setup>
-const router=useRouter();
+import { gsap } from 'gsap'
+
+onMounted(() => {
+  setTimeout(() => {
+    show.value = true
+    gsap.from('.moz', {
+      stagger: 0.2,
+      opacity: 0,
+      y: 30,
+      duration: 1
+    })
+  }, 100)
+})
+
+const show = ref(false)
+
+const router = useRouter();
 //Swipe to
     const el = ref(null);
     const { isSwiping, direction } = useSwipe(el, {
