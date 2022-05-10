@@ -6,7 +6,7 @@
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-8 w-8 rounded-full text-pink-500"
+        class="h-8 w-8 rounded-full text-red-500"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -21,26 +21,23 @@
     </div>
     <img
       src="/MyImage/amir.png"
-      class="object-cover xl:object-contain  w-full h-[95vh] xl:h-[100vh]"
+      class="object-cover lg:object-contain  w-full h-[95vh] xl:h-[100vh]"
       alt="This is Amirali Yavari Image"
     />
   </div>
 </template>
 <script setup>
+const router = useRouter();
 //Swipe to
 const el = ref(null);
 const { isSwiping, direction } = useSwipe(el, {
   onSwipeEnd() {
     if (direction.value == "RIGHT") {
-      auth.$reset('mainPage')
+      router.push('/')
     }
   },
-});
-//pinia
-import { useAuth } from "@/stores/auth"
-const auth = useAuth()
-// function
+});// function
 function changeToFirst(){
-auth.$reset()
+router.push('/')
 }
 </script>

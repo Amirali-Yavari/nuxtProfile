@@ -1,7 +1,7 @@
 <template>
   <div
     ref="el"
-    class="w-full sm:w-1/2 flex flex-col items-center gap-3 relative"
+    class="w-full sm:w-1/2 h-screen flex flex-col items-center justify-center gap-3 relative"
   >
     <div
       @click="ScrollLeft"
@@ -9,7 +9,7 @@
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-8 w-8 rounded-full text-pink-500"
+        class="h-8 w-8 rounded-full text-red-500"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -46,19 +46,17 @@
   </div>
 </template>
 <script setup>
-//pinia
-import { useAuth } from "@/stores/auth"
-const auth = useAuth()
+const router = useRouter()
 //function
 function ScrollLeft () {
-  auth.$reset('contactpage')
+  router.push('/contactUs/')
 }
 //Swipe to
 const el = ref(null);
 const { isSwiping, direction } = useSwipe(el, {
   onSwipeEnd() {
     if (direction.value == "RIGHT") {
-      auth.$reset('contactpage')
+      router.push('/contactUs/')
     }
   },
 });

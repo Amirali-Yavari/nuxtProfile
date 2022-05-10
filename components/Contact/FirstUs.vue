@@ -16,7 +16,7 @@
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-8 w-8 rounded-full text-pink-500"
+        class="h-8 w-8 rounded-full text-red-500"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -83,17 +83,13 @@
   </div>
 </template>
 <script setup>
-//pinia
-import { useAuth } from "@/stores/auth"
-const auth = useAuth()
+const router = useRouter()
 //Swipe to
     const el = ref(null);
     const { isSwiping, direction } = useSwipe(el, {
       onSwipeEnd() {
         if (direction.value == "LEFT") {
-          auth.$patch({
-            contactpage: "second"
-          })
+          router.push('/contactUs/2')
         }
       },
     });
@@ -102,9 +98,7 @@ let modalValue = ref("");
 let showModal = ref(false);
 //function
     function ScrollRight() {
-      auth.$patch({
-        contactpage: "second"
-      })
+      router.push('/contactUs/2')
     }
     function closebtn() {
       modalValue.value = "";
