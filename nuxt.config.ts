@@ -2,6 +2,7 @@ import { defineNuxtConfig } from 'nuxt3'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  modules: ['@formkit/nuxt'],
   buildModules: [
     '@vueuse/nuxt',
     '@pinia/nuxt',
