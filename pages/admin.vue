@@ -1,5 +1,11 @@
 <template>
-    <div>
-        salam admin
-    </div>
+  <div class="h-screen bg-black">
+    salam admin
+  </div>
 </template>
+
+<script setup>
+definePageMeta({
+  layout: 'admin'
+})
+</script>
